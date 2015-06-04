@@ -1,0 +1,2 @@
+<!-- replace "erb[loud]:contains('form_for Spree::User.new')" -->
+<%= form_for Spree::User.new, :as => @user, :url => spree.user_path(@user), :html => { :id => 'edit_spree_user' }, :method => :put do |f| %>

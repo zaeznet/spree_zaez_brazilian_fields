@@ -1,0 +1,20 @@
+en:
+  spree:
+    account_type: Account type
+    personal_account: Personal account
+    business_account: Business account
+    name: Name
+    corporate_name: Corporate Name
+    cpf: CPF
+    cnpj: CNPJ
+    rg: RG
+    state_registry: State registry
+    birth_date: Birth Date
+    contact: Contact
+    gender: Gender
+    male: Male
+    female: Female
+    newsletter: Receive Newsletter
+    receive_sms: Receive SMS
+    user_registration_settings: User Registration Settings
+    sms_permission: Show SMS permission

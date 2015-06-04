@@ -1,0 +1,5 @@
+<!-- insert_before 'p' -->
+<script type='text/javascript'>
+    var translations = {user_name_personal: '<%= Spree.t(:name) %>', user_name_business: '<%= Spree.t(:corporate_name) %>'};
+    new window.UserAccountType(translations, '');
+</script>

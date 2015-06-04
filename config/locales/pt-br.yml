@@ -1,0 +1,20 @@
+pt-BR:
+  spree:
+    account_type: Tipo de pessoa
+    personal_account: Pessoa física
+    business_account: Pessoa jurídica
+    name: Nome
+    corporate_name: Razão social
+    cpf: CPF
+    cnpj: CNPJ
+    rg: RG
+    state_registry: Inscrição Estadual
+    birth_date: Data de nascimento
+    contact: Contato
+    gender: Gênero
+    male: Masculino
+    female: Feminino
+    newsletter: Assinar a newsletter
+    receive_sms: Receber SMS
+    user_registration_settings: Configurações do cadastro de usuários
+    sms_permission: Exibir campo para recebimento de SMS

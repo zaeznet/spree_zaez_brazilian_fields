@@ -1,0 +1,20 @@
+<!-- insert_bottom '#user-info' -->
+<dt><%= Spree.t(:name) %></dt>
+<dd><%= @user.name %></dd>
+<% if @user.personal_account? %>
+    <dt><%= Spree.t(:cpf) %></dt>
+    <dd><%= @user.cpf %></dd>
+    <dt><%= Spree.t(:rg) %></dt>
+    <dd><%= @user.rg %></dd>
+    <dt><%= Spree.t(:birth_date) %></dt>
+    <dd><%= @user.birth_date.strftime(I18n.t('date.formats.default')) if @user.birth_date.present? %></dd>
+    <dt><%= Spree.t(:gender) %></dt>
+    <dd><%= if @user.gender == 'f' then Spree.t(:female) else Spree.t(:male) end %></dd>
+<% else %>
+    <dt><%= Spree.t(:cnpj) %></dt>
+    <dd><%= @user.cnpj %></dd>
+    <dt><%= Spree.t(:state_registry) %></dt>
+    <dd><%= @user.state_registry %></dd>
+    <dt><%= Spree.t(:contact) %></dt>
+    <dd><%= @user.contact %></dd>
+<% end %>

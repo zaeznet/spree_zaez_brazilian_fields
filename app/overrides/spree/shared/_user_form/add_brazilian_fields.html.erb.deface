@@ -1,0 +1,47 @@
+<!-- insert_bottom '#password-credentials' -->
+<hr />
+<div class='form-group'>
+  <%= f.radio_button :account_type, 'personal' %>
+  <%= f.label :account_type_personal, Spree.t(:personal_account) %>
+  <%= f.radio_button :account_type, 'business' %>
+  <%= f.label :account_type_business, Spree.t(:business_account) %>
+</div>
+<div id='personal_account'>
+  <div class='form-group'>
+    <%= f.text_field :cpf, :class => 'form-control', :placeholder => Spree.t(:cpf) %>
+  </div>
+  <div class='form-group'>
+    <%= f.text_field :rg, :class => 'form-control', :placeholder => Spree.t(:rg) %>
+  </div>
+  <div class='form-group'>
+    <%= f.text_field :birth_date, :class => 'datepicker datepicker-from form-control', :placeholder => Spree.t(:birth_date) %>
+  </div>
+  <div class='form-group'>
+    <%= f.radio_button :gender, 'f'  %>
+    <%= f.label :gender_f, Spree.t(:female) %>
+    <%= f.radio_button :gender, 'm' %>
+    <%= f.label :gender_m, Spree.t(:male) %>
+  </div>
+</div>
+<div id='business_account'>
+  <div class='form-group'>
+    <%= f.text_field :cnpj, :class => 'form-control', :placeholder => Spree.t(:cnpj) %>
+  </div>
+  <div class='form-group'>
+    <%= f.text_field :state_registry, :class => 'form-control', :placeholder => Spree.t(:state_registry) %>
+  </div>
+  <div class='form-group'>
+    <%= f.text_field :contact, :class => 'form-control', :placeholder => Spree.t(:contact) %>
+  </div>
+</div>
+<hr />
+<div class='form-group'>
+  <%= f.check_box :newsletter %>
+  <%= f.label :newsletter, Spree.t(:newsletter) %>
+</div>
+<% if Spree::Config.sms_permission %>
+    <div class='form-group'>
+      <%= f.check_box :receive_sms %>
+      <%= f.label :receive_sms, Spree.t(:receive_sms) %>
+    </div>
+<% end %>

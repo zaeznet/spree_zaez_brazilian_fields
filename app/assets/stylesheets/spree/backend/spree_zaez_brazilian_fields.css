@@ -1,0 +1,14 @@
+.p-l-n{
+    padding-left: 0;
+}
+.p-r-n{
+    padding-right: 0;
+}
+.block{
+    display: block;
+}
+.error-form{
+    font-size: 12px;
+    color: red;
+    font-weight: normal;
+}

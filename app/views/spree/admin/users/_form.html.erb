@@ -1,0 +1,139 @@
+<div data-hook="admin_user_form_fields" class="row">
+  <div class="col-md-6">
+    <%= f.field_container :email, class: ['form-group'] do %>
+        <%= f.label :email, Spree.t(:email) %>
+        <%= f.email_field :email, :class => 'form-control' %>
+        <%= error_message_on :user, :email %>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <%= f.field_container :name, class: ['form-group'] do %>
+        <%= f.label :name, Spree.t(:name) %>
+        <%= f.text_field :name, :class => 'form-control' %>
+        <%= error_message_on :user, :name %>
+    <% end %>
+  </div>
+  <div data-hook="admin_user_form_password_fields">
+    <div class="col-md-6">
+      <%= f.field_container :password, class: ['form-group'] do %>
+          <%= f.label :password, Spree.t(:password) %>
+          <%= f.password_field :password, :class => 'form-control' %>
+          <%= f.error_message_on :password %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <%= f.field_container :password, class: ['form-group'] do %>
+          <%= f.label :password_confirmation, Spree.t(:confirm_password) %>
+          <%= f.password_field :password_confirmation, :class => 'form-control' %>
+          <%= f.error_message_on :password_confirmation %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <%= f.field_container :account_type, class: ['form-group'] do %>
+        <%= f.radio_button :account_type, 'personal' %>
+        <%= f.label :account_type_personal, Spree.t(:personal_account) %>
+        <%= f.radio_button :account_type, 'business' %>
+        <%= f.label :account_type_business, Spree.t(:business_account) %>
+    <% end %>
+  </div>
+
+  <!-- personal account fields -->
+  <div id="personal_account" data-hook="admin_user_form_personal_accounts_fields">
+    <div class="col-md-6">
+      <%= f.field_container :cpf, class: ['form-group'] do %>
+          <%= f.label :cpf, Spree.t(:cpf) %>
+          <%= f.text_field :cpf, :class => 'form-control' %>
+          <%= error_message_on :user, :cpf %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <%= f.field_container :rg, class: ['form-group'] do %>
+          <%= f.label :rg, Spree.t(:rg) %>
+          <%= f.text_field :rg, :class => 'form-control' %>
+          <%= error_message_on :user, :rg %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <%= f.field_container :birth_date, class: ['form-group'] do %>
+          <%= f.label :birth_date, Spree.t(:birth_date) %>
+          <%= f.text_field :birth_date, :class => 'datepicker datepicker-from form-control' %>
+          <%= error_message_on :user, :birth_date %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <%= f.field_container :gender, class: ['form-group'] do %>
+          <%= f.label :gender, Spree.t(:gender), class: 'block' %>
+          <%= f.radio_button :gender, 'f'  %>
+          <%= f.label :gender_f, Spree.t(:female) %>
+          <br />
+          <%= f.radio_button :gender, 'm' %>
+          <%= f.label :gender_m, Spree.t(:male) %>
+      <% end %>
+    </div>
+  </div>
+  <!-- business accounts fields -->
+  <div id="business_account" data-hook="admin_user_form_business_accounts_fields">
+    <div class="col-md-6">
+      <%= f.field_container :cnpj, class: ['form-group'] do %>
+          <%= f.label :cnpj, Spree.t(:cnpj) %>
+          <%= f.text_field :cnpj, :class => 'form-control' %>
+          <%= error_message_on :user, :cnpj %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <%= f.field_container :state_registry, class: ['form-group'] do %>
+          <%= f.label :state_registry, Spree.t(:state_registry) %>
+          <%= f.text_field :state_registry, :class => 'form-control' %>
+          <%= error_message_on :user, :state_registry %>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <%= f.field_container :contact, class: ['form-group'] do %>
+          <%= f.label :contact, Spree.t(:contact) %>
+          <%= f.text_field :contact, :class => 'form-control' %>
+          <%= error_message_on :user, :contact %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-md-12 p-l-n p-r-n">
+    <div class="col-md-6">
+      <%= f.field_container :newsletter, class: ['form-group'] do %>
+          <%= f.check_box :newsletter %>
+          <%= f.label :newsletter, Spree.t(:newsletter) %>
+      <% end %>
+    </div>
+    <% if Spree::Config.sms_permission %>
+      <div class="col-md-6">
+        <%= f.field_container :receive_sms, class: ['form-group'] do %>
+            <%= f.check_box :receive_sms %>
+            <%= f.label :receive_sms, Spree.t(:receive_sms) %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-12">
+    <div data-hook="admin_user_form_roles" class="form-group">
+      <strong><%= Spree.t(:roles) %></strong>
+      <% @roles.each do |role| %>
+          <div class="checkbox">
+            <%= label_tag "user_spree_role_#{role.name}" do %>
+                <%= check_box_tag 'user[spree_role_ids][]', role.id, @user.spree_roles.include?(role), :id => "user_spree_role_#{role.name}" %>
+                <%= role.name %>
+            <% end %>
+          </div>
+      <% end %>
+      <%= hidden_field_tag 'user[spree_role_ids][]', '' %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    new window.UserAccountType();
+
+    Spree.translations.user_name_personal = '<%= Spree.t(:name) %>';
+    Spree.translations.user_name_business = '<%= Spree.t(:corporate_name) %>';
+</script>

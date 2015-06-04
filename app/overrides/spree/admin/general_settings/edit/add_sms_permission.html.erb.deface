@@ -1,0 +1,23 @@
+<!-- insert_before "[data-hook='buttons']" -->
+<%#-------------------------------------------------%>
+<%# User registration settings                      %>
+<%#-------------------------------------------------%>
+<div class='row'>
+  <div class='col-sm-6'>
+    <div class='panel panel-default security'>
+      <div class='panel-heading'>
+        <h1 class='panel-title'>
+          <%= Spree.t(:user_registration_settings)%>
+        </h1>
+      </div>
+      <div class='panel-body'>
+        <div class='checkbox'>
+          <%= label_tag :sms_permission do %>
+              <%= preference_field_tag(:sms_permission, Spree::Config[:sms_permission], type: :boolean) %>
+              <%= Spree.t(:sms_permission) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

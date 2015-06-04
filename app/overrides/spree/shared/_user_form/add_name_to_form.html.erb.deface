@@ -1,0 +1,4 @@
+<!-- insert_top '#password-credentials' -->
+<div class='form-group'>
+  <%= f.text_field :name, :class => 'form-control', :placeholder => Spree.t(:name) %>
+</div>
