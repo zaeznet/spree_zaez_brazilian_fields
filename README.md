@@ -1,10 +1,10 @@
-SpreeZaezBrazilianFields
+Spree Brazilian Fields [![Build Status](https://travis-ci.org/zaeznet/spree_zaez_brazilian_fields.svg?branch=master)](https://travis-ci.org/zaeznet/spree_zaez_brazilian_fields)
 ====================
 
 This gem add some brazilian fields to user class.
 
 For the personal account is added CPF, RG, birth date and gender.
-For the business accountis added CNPJ, state registry and contact name.
+For the business account is added CNPJ, state registry and contact name.
 For both accounts is added name and permission to send newsletter and SMS.
 
 In general settings, it's possible enable/disable if the receive_sms field it should be displayed.
