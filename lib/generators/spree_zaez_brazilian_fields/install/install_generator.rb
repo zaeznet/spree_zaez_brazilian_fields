@@ -1,4 +1,4 @@
-module SpreeBrazilianFields
+module SpreeZaezBrazilianFields
   module Generators
     class InstallGenerator < Rails::Generators::Base
 
