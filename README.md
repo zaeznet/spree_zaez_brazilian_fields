@@ -20,7 +20,7 @@ Installation
 Add spree_zaez_brazilian_fields to your Gemfile:
 
 ```ruby
-gem 'spree_zaez_brazilian_fields'
+gem 'spree_zaez_brazilian_fields', github: 'zaeznet/spree_zaez_brazilian_fields'
 ```
 
 Bundle your dependencies and run the installation generator:
