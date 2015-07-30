@@ -18,3 +18,30 @@ en:
     receive_sms: Receive SMS
     user_registration_settings: User Registration Settings
     sms_permission: Show SMS permission
+    authentication_token: Authentication Token
+    bill_address_id: Bill Address
+
+    confirmation_sent_at: Confirmation Sent at
+    confirmation_token: Confirmation Token
+    confirmed_at: Confirmed at
+    current_sign_in_at: Current Sign in at
+    current_sign_in_ip: Current Sign in IP
+    deleted_at: Deleted at
+    encrypted_password: Encrypted Password
+    failed_attempts: Failed Attempts
+    last_request_at: Last Request at
+    last_sign_in_at: Last Sign in at
+    last_sign_in_ip: Last Sign in IP
+    locked_at: Locked at
+    password_salt: Password Salt
+    perishable_token: Perishable Token
+    persistence_token: Persistence Token
+    remember_created_at: Remember Created at
+    remember_token: Remember Token
+    reset_password_sent_at: Reset Password Sent at
+    reset_password_token: Reset Password Token
+    ship_address_id: Ship Address
+    sign_in_count: Sign in Count
+    spree_api_key: Spree API key
+    unlock_token: Unlock Token
+    updated_at: Updated at
