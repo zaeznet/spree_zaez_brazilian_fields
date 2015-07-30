@@ -18,3 +18,29 @@ pt-BR:
     receive_sms: Receber SMS
     user_registration_settings: Configurações do cadastro de usuários
     sms_permission: Exibir campo para recebimento de SMS
+
+    confirmation_sent_at: Confirmação Enviada Em
+    confirmation_token: Token de Confirmação
+    confirmed_at: Confirmado Em
+    current_sign_in_at: Acesso Atual Em
+    current_sign_in_ip: IP do Acesso Atual
+    deleted_at: Excluído Em
+    encrypted_password: Senha Encriptada
+    failed_attempts: Tentativas Falhadas
+    last_request_at: Última Requesição Em
+    last_sign_in_at: Último Acesso Em
+    last_sign_in_ip: IP do Último Acesso
+    locked_at: Trancado Em
+    password_salt: Password Salt
+    perishable_token: Perishable Token
+    persistence_token: Token de Persistência
+    remember_created_at: Lembrete Criado Em
+    remember_token: Token de Lembrete
+    reset_password_sent_at: Redefinição de Senha Enviada Em
+    reset_password_token: Token de Redefinição de Senha
+    ship_address_id: Endereço de Entrega
+    bill_address_id: Endereço de Cobrança
+    sign_in_count: Contagem de Logins
+    spree_api_key: Chave da API do Spree
+    unlock_token: Token de Desbloqueio
+    updated_at: Atualizado Em

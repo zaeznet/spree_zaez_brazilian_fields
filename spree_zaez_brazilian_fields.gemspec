@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_zaez_brazilian_fields'
-  s.version     = '3.0.0'
+  s.version     = '3.0.1'
   s.summary     = 'Add brazilian fields to Spree Commerce'
   s.description = 'Add brazilian fields to Spree Commerce'
   s.required_ruby_version = '>= 2.0.0'
@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.email     = 'contato@zaez.net'
   s.homepage  = 'https://github.com/zaeznet/spree_zaez_brazilian_fields'
 
-  #s.files       = `git ls-files`.split("\n")
-  #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files       = `git ls-files`.split("\n")
+  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
